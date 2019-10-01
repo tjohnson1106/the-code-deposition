@@ -1,9 +1,9 @@
 import React from "react";
- import { Provider } from "react-redux";
+import { Provider } from "react-redux";
 
 import "./App.css";
-// import { Routes } from "./routes";
 import Nav from "./components/Nav";
+import { Routes } from "./routes";
 import store from "./store";
 
 const App: React.FC = () => {
@@ -11,6 +11,7 @@ const App: React.FC = () => {
     <Provider store={store}>
       <div className="App">
         <Nav />
+        <Routes />
       </div>
     </Provider>
   );

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
-const Nav = (props) => {
+const Nav = () => {
   return (
     <nav>
       <ul>
