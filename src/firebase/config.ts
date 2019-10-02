@@ -15,6 +15,9 @@ const config = {
 };
 
 class Firebase {
+  signin(email: string, password: string) {
+    throw new Error("Method not implemented.");
+  }
   // The Firebase Auth service interface.
   auth: firebase.auth.Auth;
   db: firebase.firestore.Firestore;
@@ -35,7 +38,8 @@ class Firebase {
       });
     return user;
   }
-  //   login
+  // login
+
   async login(email: string, password: string) {
     const user = await firebase
       .auth()
@@ -44,6 +48,17 @@ class Firebase {
         console.log(err);
       });
     return user;
+  }
+  // logout
+
+  async logout() {
+    const logout = await firebase
+      .auth()
+      .signOut()
+      .catch((err) => {
+        console.log(err);
+      });
+    return logout;
   }
 }
 

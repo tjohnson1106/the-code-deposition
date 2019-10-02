@@ -3,12 +3,12 @@ import React, { useState } from "react";
 // import { createUser } from "../actions/sign-in";
 
 const SignIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [_email, setEmail] = useState("");
+  const [_password, setPassword] = useState("");
 
   const signin = (e: Event) => {
     e.preventDefault();
-    console.log("user created");
+    console.log("user created", _email, _password);
   };
 
   return (
