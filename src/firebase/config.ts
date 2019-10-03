@@ -15,12 +15,14 @@ const config = {
 };
 
 class Firebase {
-  signin(email: string, password: string) {
-    throw new Error("Method not implemented.");
-  }
-  // The Firebase Auth service interface.
-  auth: firebase.auth.Auth;
   db: firebase.firestore.Firestore;
+  auth: firebase.auth.Auth;
+  // signin(email: string, password: string) {
+  //   throw new Error("Method not implemented.");
+  // }
+  // // The Firebase Auth service interface.
+  // auth: firebase.auth.Auth;
+  // db: firebase.firestore.Firestore;
   constructor() {
     firebase.initializeApp(config);
     this.auth = firebase.auth();
@@ -29,7 +31,7 @@ class Firebase {
   }
 
   // sign up
-  async signup(email: string, password: string) {
+  async signin(email: string, password: string) {
     const user = await firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
