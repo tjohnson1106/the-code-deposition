@@ -11,7 +11,7 @@ export const loginUser = (email: string, password: string) => {
         type: "LOGIN_USER",
         payload: user
       });
-      return user;
+      return user as any;
     }
   };
 };

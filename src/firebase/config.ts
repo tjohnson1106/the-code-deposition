@@ -38,6 +38,7 @@ class Firebase {
       });
     return user;
   }
+
   // login
 
   async login(email: string, password: string) {
@@ -59,6 +60,12 @@ class Firebase {
         console.log(err);
       });
     return logout;
+  }
+
+  async getUserState() {
+    return new Promise((resolve) => {
+      this.auth.onAuthStateChanged(resolve);
+    });
   }
 }
 
