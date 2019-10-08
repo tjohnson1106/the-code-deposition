@@ -9,7 +9,7 @@ const reducers = combineReducers({
   signIn: createUser,
   login: loginUser,
   logout: logoutUser,
-  create: createPost as any
+  create: createPost
 });
 
 export default reducers;
