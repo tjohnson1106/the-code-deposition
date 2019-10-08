@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import firebase from "../firebase/config";
 import { logoutUser } from "../actions/logout";
 
-const Nav = () => {
+const Nav = (props: any) => {
   const loginSelector = useSelector((state: any) => state.login);
   const signInSelector = useSelector((state: any) => state.signIn);
   const [userState, setUserState] = useState(null);
@@ -22,7 +22,7 @@ const Nav = () => {
     console.log("logout user");
     setUserState(null);
     await logoutUserAction();
-    // props.history.replace("/`")
+    props.history.replace("/");
   };
 
   let buttons;
